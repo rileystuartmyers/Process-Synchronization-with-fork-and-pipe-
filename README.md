@@ -5,24 +5,23 @@ The input file provides each process with various instructions to perform certai
 
 Below are the comments found in main.cpp:
 
-// This program is to highlight the functionality of both the fork() and pipe() functions in c++. 
-// The two files, main.cpp and values.h, work together to functionally use fork and pipe in order 
-// to fulfill the prompt. 
+This program is to highlight the functionality of both the fork() and pipe() functions in c++. 
+The two files, main.cpp and values.h, work together to functionally use fork and pipe in order 
+to fulfill the prompt. 
 
-// values.h:
-//      values.h strictly contains standard implementation of a doubly linked list, with struct values of
-//      value (integer value of variable) and name (name of variable).
-//      functions include...
-//          void insert(node **_head, std::string _name, int _value) {} - takes double pointer to head node, name, and value as parameters, and inserts
-//                                                                        into selected linked list
+values.h:
 
-//          void print_all(node *_head, std::ofstream &ofs) {} - takes head node and output file stream as parameters, and simply
-//                                                               prints all values in selected linked list
+  values.h strictly contains standard implementation of a doubly linked list, with struct values of value (integer value of variable) and name (name of variable).
+  
+  functions include...
+    
+    void insert(node **_head, std::string _name, int _value) {} - takes double pointer to head node, name, and value as parameters, and inserts into selected linked list
 
-//          void print_reverse(node *_head) {} -                 takes head node as parameter, and prints values in reverse
+    void print_all(node *_head, std::ofstream &ofs) {} - takes head node and output file stream as parameters, and simply prints all values in selected linked list
 
-//          node* find_value(node** _head, std::string _name) {} - takes double pointer to head node, and name. it searches through the selected linked
-//                                                                 list until the current node's name value is equal to '_name'
+    void print_reverse(node *_head) {} - takes head node as parameter, and prints values in reverse
+
+    node* find_value(node** _head, std::string _name) {} - takes double pointer to head node, and name. it searches through the selected linked list until the current node's name value is equal to '_name'
 
 // main.cpp:
 //      starts by initializing input and output file streams to arguments in the command line,
