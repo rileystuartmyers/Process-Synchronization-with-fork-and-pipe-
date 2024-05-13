@@ -23,10 +23,11 @@ values.h:
 
     node* find_value(node** _head, std::string _name) {} - takes double pointer to head node, and name. it searches through the selected linked list until the current node's name value is equal to '_name'
 
-// main.cpp:
-//      starts by initializing input and output file streams to arguments in the command line,
-//      the while loop then reads the 'sv' file and retrieves all command lines and then 
-//      stores them in a vector 'command_lines'. Each string in the vector is then filtered
+main.cpp:
+  
+  starts by initializing input and output file streams to arguments in the command line,
+  the while loop then reads the 'sv' file and retrieves all command lines and then 
+  stores them in a vector 'command_lines'. Each string in the vector is then filtered
 //      and reformatted so variables are more easily attainable, which it does by 
 //      removing spaces, finding indexes and ranges of each variable, and seeing which (if any)
 //      operation character is found in the command line. 
