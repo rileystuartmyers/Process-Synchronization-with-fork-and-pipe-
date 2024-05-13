@@ -25,23 +25,10 @@ values.h:
 
 main.cpp:
   
-  starts by initializing input and output file streams to arguments in the command line,
-  the while loop then reads the 'sv' file and retrieves all command lines and then 
-  stores them in a vector 'command_lines'. Each string in the vector is then filtered
-//      and reformatted so variables are more easily attainable, which it does by 
-//      removing spaces, finding indexes and ranges of each variable, and seeing which (if any)
-//      operation character is found in the command line. 
+  Starts by initializing input and output file streams to arguments in the command line, the while loop then reads the 'sv' file and retrieves all command lines and then stores them in a vector 'command_lines'. Each string in the vector is then filtered and reformatted so variables are more easily attainable, which it does by removing spaces, finding indexes and ranges of each variable, and seeing which (if any) operation character is found in the command line. 
 
-//      Then, forking and piping are used to connect the reading and writing processes of the command
-//      lines. The child process (id == 0) is used to read 'giver' variables and send them through
-//      a pipe to the parent function, where giver is the value of the variable that is being used to 
-//      manipulate another variable.
-//      Since both parent and child functions contain iterative loops, then for each iteration of 
-//      reading through the command lines the parent waits for the child to finish its iteration first, as
-//      to work through the lines together chronologically. The parent then reads the giver variable 
-//      from the pipe (which is sent as a linked list node), reads the value from that node, and then
-//      alters the 'taker' node's value, which is found using the 'find_value()' function in values.h.
+  Then, forking and piping are used to connect the reading and writing processes of the command lines. The child process (id == 0) is used to read 'giver' variables and send them through a pipe to the parent function, where giver is the value of the variable that is being used to manipulate another variable.
+  Since both parent and child functions contain iterative loops, then for each iteration of reading through the command lines the parent waits for the child to finish its iteration first, as to work through the lines together chronologically. The parent then reads the giver variable from the pipe (which is sent as a linked list node), reads the value from that node, and then alters the 'taker' node's value, which is found using the 'find_value()' function in values.h.
 
-//      Upon finishing their respective iterative loops, they will both reach the end of main.cpp, where 
-//      only the parent is allowed to print the final values, so as to not print twice.
+  Upon finishing their respective iterative loops, they will both reach the end of main.cpp, where only the parent is allowed to print the final values, so as to not print twice.
 
