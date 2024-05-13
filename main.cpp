@@ -9,7 +9,7 @@
 
 #include "values.h"
 
-// Hello! This program is to highlight the functionality of both the fork() and pipe() functions in c++. 
+// This program is to highlight the functionality of both the fork() and pipe() functions in c++. 
 // The two files, main.cpp and values.h, work together to functionally use fork and pipe in order 
 // to fulfill the prompt. 
 
